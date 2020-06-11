@@ -1,0 +1,42 @@
+{% set data = load_setup_py_data() %}
+
+package:
+  name: package_name
+  version: {{ data.get('version') }}
+
+source:
+  # git_url is used although it is not an URL. The reason is that the package is built
+  # from the last commit and so any files which are not committed are not included in
+  # the build. Be careful, the same is true for modified but not committed files.
+  git_url: ../
+
+build:
+  number: 0
+  noarch: python
+
+requirements:
+  host:
+    - python
+  run:
+    - python >=3.6,<3.8  # optional Python version constraints here.
+    # Add other packages necessary to run the package.
+    - numpy  # etc.
+
+test:
+  commands:
+    - pytest
+  source_files:
+    # Copy the tox.ini with its pytest configuration.
+    - tox.ini
+    # Copy over the test files. You can use folders and files.
+    - package/tests
+    - tests
+
+# Optional, but useful.
+about:
+  home: {{ data.get('url') }}
+  dev_url: https://github.com/OpenSourceEconomics/package
+  license: {{ data.get('license') }}
+  license_file: LICENSE
+  summary: {{ data.get('description') }}
+  doc_url: {{ data.get('url') }}
