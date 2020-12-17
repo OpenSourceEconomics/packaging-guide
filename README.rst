@@ -346,8 +346,12 @@ administering-a-repository/about-protected-branches#branch-protection-settings>`
 Issue and Pull Request templates
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Create issue and pull request templates to standardize the information provided by users
+Issue and pull request templates can help standardize the information provided by users
 and developers.
+
+Open Source Economics has `organizational level issue and PR templates <https://github.
+com/OpenSourceEconomics/.github/.github>`_. Additionally, each repository can override
+it by adding their own templates.
 
 - `Github guide <https://help.github.com/en/github/building-a-strong-community/
   about-issue-and-pull-request-templates>`_
@@ -355,6 +359,20 @@ and developers.
   <https://github.com/OpenSourceEconomics/estimagic/tree/master/.github>`_
 - `respy's issue and PR templates
   <https://github.com/OpenSourceEconomics/respy/tree/master/.github>`_
+- `econsa's issue and PR templates
+  <https://github.com/OpenSourceEconomics/econsa/tree/master/.github>`_
+
+
+Make your code citable with Zenodo
+----------------------------------
+
+`Zenodo <https://zenodo.org/>`_ is a handy tool to create DOI across released versions
+of your package. You can follow `this guide written by GitHub <https://guides.github.
+com/activities/citable-code/>`_ to get started. Note that two requirements need to be
+met in order to use Zenodo:
+
+- The target repository should be public, and
+- There should be at least 1 release.
 
 
 How to maintain this guide
