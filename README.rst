@@ -350,8 +350,8 @@ Issue and pull request templates can help standardize the information provided b
 and developers.
 
 Open Source Economics has `organizational level issue and PR templates <https://github.
-com/OpenSourceEconomics/.github/.github>`_. Additionally, each repository can override
-it by adding their own templates.
+com/OpenSourceEconomics/.github/tree/main/.github>`_. Additionally, each repository can
+override it by adding their own templates.
 
 - `Github guide <https://help.github.com/en/github/building-a-strong-community/
   about-issue-and-pull-request-templates>`_
